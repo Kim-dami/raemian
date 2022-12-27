@@ -1,0 +1,147 @@
+@charset "utf-8";
+/*---------------------------------------------
+	파일명 : home
+	설　명 : 홈 및 식단 구독설
+	클래스명 : 카멜케이스, 태그역활 + 컨텐츠내용 조합, 넘버링은 하이픈
+	작성순서 : 1. 레이아웃  2.크기/간격  3.박스모양  4.폰트  5.기타
+			position / display / float / width / height / margin / padding / border / background / font / overflow / etc...
+---------------------------------------------*/
+/* 메뉴선택 */
+.sectionType{position: relative; width: 100%; height: auto; padding: 10px 0; background-color: #FFFFFF;}
+.sectionType .ulType{position: relative; width: 100%; height: auto;}
+.sectionType .liType{position: relative; width: 100%; height: auto; padding: 10px 20px; box-sizing: border-box;}
+.sectionType .liType:last-child{margin-bottom: 0;}
+.sectionType .liType:after{content: ""; display: block; clear: both;}
+.sectionType .photoType{float: left; width: 90px; height: 50px; margin-right: 15px; border-radius: 5px; background-color: #F8F8F8; overflow: hidden;}
+.sectionType .photoType img{width:100%; height:100%; object-fit: cover;}
+.sectionType .infoType{float: left; padding: 8px 0;}
+.sectionType .infoType .name{line-height: 1rem; color: #131313; font-weight: 600; margin-bottom: 5px;}
+.sectionType .infoType .price{line-height: 1rem; color: #A0A0A0;}
+.sectionType .quantityType{float: right; padding: 8px 0;}
+.sectionType .quantityType .setQuantity{display: inline-block; width: 32px; height: 32px; vertical-align: top;}
+.sectionType .quantityType .btnQuantity{display: block; width: 100%; height: 100%; line-height: 28px; border: 1px solid #F0F0F0; border-radius: 100%; box-sizing: border-box; color: #505050; font-size: 1.28rem; font-weight: 500; text-align: center;}
+.sectionType .quantityType .fontDisable,
+.sectionType .quantityType .fontMain{line-height: 32px; margin: 0 15px;}
+.sectionType .quantityType .fontMain{font-weight: 600;}
+
+/* 홈 */
+#home{padding: 50px 0 105px 0;}
+#home .sectionBanner{position: relative; z-index: 10; width: 100%; height: 180px; background-color: #E0E0E0; text-align: center;}
+#home .sectionBanner .imgWeeklyMeal{width: 100%; height: 100%; vertical-align: top; object-fit: contain;}
+#home .sectionBanner .setZoom{position: absolute; top: 9px; right: 8px;}
+#home .sectionBanner .btnZoom{line-height: 16px; padding: 7px; border-radius: 5px; background-color: #FFFFFF; font-size: 0.86rem; box-shadow: 0 2px 8px rgba(0,0,0,12%);}
+#home .sectionBanner .btnZoom:hover,
+#home .sectionBanner .btnZoom:focus{background-color: #F8F8F8;}
+#home .sectionBanner .iconZoom{width: 16px; height: 16px; vertical-align: top;}
+#home .sectionBanner .iconZoom rect{fill: none;}
+#home .sectionBanner .iconZoom circle{fill: none; stroke: #009dad; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.2px;}
+#home .sectionBanner .iconZoom line{fill: none; stroke: #009dad; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.2px;}
+#home .sectionBanner .contentZoom{position: absolute; right: 8px; top: 52px; padding: 10px; border-radius: 5px; box-sizing: border-box; background-color: #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,12%);}
+#home .sectionBanner .linkZoom{position: relative; width: 210px; line-height: 16px; padding: 10px 5px; box-sizing: border-box; font-size: 0.86rem; text-align: left; cursor: pointer;}
+#home .sectionBanner .linkZoom:hover,
+#home .sectionBanner .linkZoom:focus{background-color: #F8F8F8;}
+#home .sectionBanner .iconMore{position: absolute; right: 5px; top:50%; margin-top: -8px;}
+#home .sectionBanner .iconMore path{stroke: #A0A0A0;}
+#home .sectionWeekSelect{position: relative; width: 100%; height: auto; padding: 10px 20px 5px 10px; box-sizing: border-box; background-color: #FFFFFF;}
+#home .sectionWeekSelect:after{content: ""; display: block; clear: both;}
+#home .sectionWeekSelect .setWeekSelect{float: left; position: relative; padding: 10px; box-sizing: border-box;}
+#home .sectionWeekSelect .setWeekSelect:first-child:after{content: ''; position: absolute; top: 50%; right: 0; width: 1px; height: 10px; margin-top: -5px; background-color: #F0F0F0;}
+#home .sectionWeekSelect .inputWeekSelect{position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; opacity: 0;}
+#home .sectionWeekSelect .labelWeekSelect{line-height: 1.14rem; color: #A0A0A0; font-size: 1.14rem; font-weight: 600;}
+#home .sectionWeekSelect .inputWeekSelect:checked + .labelWeekSelect{color: #009DAD;}
+#home .sectionDaySelect{position: relative; width: 100%; height: auto; background-color: #FFFFFF; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,6%);}
+#home .sectionDaySelect:after{content: ""; display: block; clear: both;}
+#home .sectionDaySelect .setDaySelect{float: left; position: relative; width: 14.28%;}
+#home .sectionDaySelect .inputDaySelect{position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0;}
+#home .sectionDaySelect .labelDaySelect{display: block; position: relative; width: 100%; height: 58px; padding: 12px 0; border-top: 1px solid #F0F0F0; border-right: 1px solid #F0F0F0; border-bottom: 1px solid #F0F0F0; box-sizing: border-box;}
+#home .sectionDaySelect .setDaySelect:first-child .labelDaySelect{border-left: 1px solid #F0F0F0;}
+#home .sectionDaySelect .labelDaySelect .date{line-height: 0.86rem; margin-bottom: 5px; color: #A0A0A0; font-size: 0.86rem; text-align: center;}
+#home .sectionDaySelect .labelDaySelect .dayOfWeek{line-height: 1.14rem; color: #131313; font-size: 1.14rem; font-weight: 600; text-align: center;}
+#home .sectionDaySelect .inputDaySelect:checked + .labelDaySelect{padding: 11px 0; border-top: 2px solid #009DAD; border-right:2px solid #009DAD; border-bottom: 2px solid #009DAD; border-left: 2px solid #009DAD;}
+#home .sectionDaySelect .inputDaySelect:checked + .labelDaySelect .date,
+#home .sectionDaySelect .inputDaySelect:checked + .labelDaySelect .dayOfWeek{color: #009DAD;}
+#home .sectionDaySelect .homeOrder{position: relative; width: 100%; height: auto; cursor: pointer;}
+#home .sectionDaySelect .homeOrder .badgeOrder{border-right: 1px solid #F0F0F0; box-sizing: border-box;}
+#home .sectionDaySelect .homeOrder:first-child .badgeOrder{border-left: 1px solid #F0F0F0;}
+#home .sectionDaySelect .homeOrder .badgeState{position: absolute; left: 0; right: 0; bottom: -20px; width: 100%; height: 20px; line-height: 20px; color: #A0A0A0; font-size: 0.72rem; text-align: center;}
+#home .sectionDaySelect .homeOrder .badgeState .iconPartial{width: 12px; height: 12px; margin-top: 4px; vertical-align: top;}
+#home .sectionDaySelect .homeOrder .badgeState circle{fill: none; stroke: #009DAD; stroke-width: 1.5px;}
+#home .sectionDaySelect .homeOrder .badgeState line{fill: none; stroke: #009DAD; stroke-width: 1.5px;  stroke-linecap: round; stroke-miterlimit: 4;}
+#home .sectionType h3{padding: 20px 20px 10px 20px; box-sizing: border-box;}
+#home .sectionType .textRight{position: absolute; top: 0; right: 20px; line-height: 1.14rem; padding: 20px 0 10px 0; color: #505050; text-align: right; font-size: 0.742rem; font-weight: 500;}
+#home .sectionType .textRight .title{margin-right: 5px; margin-left: 12px; color: #A0A0A0;}
+#home .sectionType .orderIsClosed{position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 10; width: 100%; height: 100%; background-color: rgba(19,19,19,50%);}
+#home .sectionType .orderIsClosed .txtClosed{position: absolute; top: 50%; left: 50%; color: #FFFFFF; font-weight: 600; transform: translate(-50%, -50%);}
+#home .sectionCs{position: relative; width: 100%; height: auto; padding: 20px; box-sizing: border-box; background-color: #FFFFFF;}
+#home .sectionCs .titleCs{width: 100%; height: auto; line-height: 16px;}
+#home .sectionCs .titleCs .time{margin-left: 5px; color: #A0A0A0; font-size: 0.86rem;}
+#home .sectionCs .linkCs{position: absolute; top: 20px; right: 30px; line-height: 16px; text-align: right;}
+#home .sectionCs .linkCs:hover{text-decoration: underline;}
+#home .sectionCs .linkCs .iconCall{width: 16px; height: 16px; vertical-align: top;}
+#home .sectionCs .linkCs .iconCall rect{fill: none;}
+#home .sectionCs .linkCs .iconCall path{fill: #505050;}
+#bottomFix .sectionOrder{position: relative; z-index: 10; width: 100%; height: auto; padding:8px 20px 8px 120px; box-sizing: border-box; background-color: #F8F8F8;}
+#bottomFix .sectionOrder .leftOrder{position: absolute; top: 0; left: 20px; bottom: 0; padding: 12px 0;}
+#bottomFix .sectionOrder .leftOrder .quantity{line-height: 0.86rem; margin-bottom: 4px; color: #A0A0A0; font-size: 0.86rem;}
+#bottomFix .sectionOrder .leftOrder .amount{line-height: 1.14rem; color: #131313; font-size: 1.14rem; font-weight: 600; letter-spacing: -0.5px;}
+#bottomFix .sectionNotSet{position: absolute; top: -34px; left: 37.5%; height: 24px; line-height: 24px; padding: 0 10px; border-radius: 12px; color: #FFFFFF; font-size: 0.86rem; text-align: center; transform: translateX(-50%) translateY(0); animation-name: notSetBounce; animation-duration: 1.8s; animation-iteration-count: 2;}
+@keyframes notSetBounce {
+    0%{transform: translateX(-50%) translateY(0);}
+    20%{transform: translateX(-50%) translateY(0);}
+    40%{transform: translateX(-50%) translateY(-12px);}
+    50%{transform: translateX(-50%) translateY(0);}
+    60%{transform: translateX(-50%) translateY(-6px);}
+    80%{transform: translateX(-50%) translateY(0);}
+    100%{transform: translateX(-50%) translateY(0);}
+}
+#bottomFix .sectionNotSet:after{content: ""; display: block; position: absolute; bottom: -16px; left: 50%; width: 0; right: 0; margin-left: -6px; border-top: 8px solid #009dad; border-right: 6px solid transparent; border-bottom: 8px solid transparent; border-left: 6px solid transparent;}
+
+/* 식단 구독설정 */
+#mealPlan{padding: 50px 0 155px 0;}
+#mealPlan.initial{padding: 50px 0 105px 0;}
+#mealPlan .sectionTitle{position: relative; width: 100%; height: auto; padding: 25px 20px 20px 20px; box-sizing: border-box; background-color: #FFFFFF;}
+#mealPlan .sectionTitle .subtitle{line-height: 1.14rem; margin-bottom: 5px; font-size: 1.14rem;}
+#mealPlan .sectionInfo{position: relative; width: 100%; height: auto; padding-bottom: 20px; box-sizing: border-box; background-color: #FFFFFF;}
+#mealPlan .sectionInfo .bgInfo{position: relative; width: 100%; height: auto; padding: 20px 15px; box-sizing: border-box; background-color: #F8F8F8;}
+#mealPlan .sectionInfo .dlInfo{position: relative; width: 100%; height: auto; margin-bottom: 5px; font-size: 0.86rem;}
+#mealPlan .sectionInfo .dlInfo:last-child{margin-bottom: 0;}
+#mealPlan .sectionInfo .titleInfo{position: absolute; top: 0; left: 0; line-height: 1.14rem; color: #A0A0A0;}
+#mealPlan .sectionInfo .contentInfo{line-height: 1.14rem; padding-left: 60px; box-sizing: border-box; color: #131313;}
+#mealPlan .sectionDaySelect{position: relative; width: 100%; height: auto; padding-bottom: 10px; box-sizing: border-box; background-color: #FFFFFF;}
+#mealPlan .sectionDaySelect:after{content: ""; display: block; clear: both;}
+#mealPlan .sectionDaySelect .setDaySelect{float: left; position: relative; width: 14.28%; box-sizing: border-box;}
+#mealPlan .sectionDaySelect .inputDaySelect{position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0;}
+#mealPlan .sectionDaySelect .labelDaySelect{display: block; position: relative; width: 100%; height: 65px; border-top: 1px solid #F0F0F0; border-right: 1px solid #F0F0F0; border-bottom: 1px solid #F0F0F0; box-sizing: border-box;}
+#mealPlan .sectionDaySelect .setDaySelect:first-child .labelDaySelect{border-left: 1px solid #F0F0F0;}
+#mealPlan .sectionDaySelect .dayOfWeek{position: absolute; top: 0; right: 0; left: 0; line-height: 48px; background-color: transparent; color: #131313; font-size: 1.14rem; text-align: center;}
+#mealPlan .sectionDaySelect .selectedNum{position: absolute; right: 0; bottom: 0; left: 0; height: 15px; line-height: 15px; background-color: #F8F8F8; color: #C0C0C0; font-size: 0.72rem; text-align: center;}
+#mealPlan .sectionDaySelect .selectedNum.bgMain{color: #FFFFFF; font-weight: 600;}
+#mealPlan .sectionDaySelect .inputDaySelect:checked + .labelDaySelect{border-top: 2px solid #009DAD; border-right:2px solid #009DAD; border-bottom: 2px solid #009DAD; border-left: 2px solid #009DAD; box-shadow: 0 2px 8px rgba(0,0,0,12%);}
+#mealPlan .sectionDaySelect .inputDaySelect:checked + .labelDaySelect .dayOfWeek{line-height: 47px;}
+#bottomFix .sectionSum{padding:15px 20px  0 20px; box-sizing: border-box; background-color: #FFFFFF;}
+#bottomFix .sectionSum:after{content: ""; display: block; clear: both;}
+#bottomFix .sectionSum .leftSum{float: left; line-height: 1.14rem; color: #A0A0A0;}
+#bottomFix .sectionSum .rightSum{float: right; line-height: 1.14rem; color: #A0A0A0;}
+#bottomFix .sectionSum .rightSum .amount{margin-left: 5px; color: #131313; font-size: 1.14rem; font-weight: 600;}
+
+/* 식단 구독서비스 이용방법 팝업 */
+.btnHowService{position: absolute; top: 0; right: 0; width: 50px; height: 50px; line-height: 50px; text-align: center;}
+.btnHowService svg{width: 18px; height: 18px; vertical-align: middle;}
+.btnHowService svg path{fill: #009DAD;}
+#popService{position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 5000; width: 100%; height: 100%; background-color: rgba(0,0,0,70%);}
+#popService .bgPopService{position: fixed; top: 50%; left: 50%; width: 320px; height: auto; margin-top: -280px; margin-left: -160px; border-radius: 5px; background-color: #FFFFFF;}
+#popService .bgPopService .sectionTitle{position: relative; width: 100%; height: auto; padding: 30px 20px 0 20px; box-sizing: border-box;}
+#popService .bgPopService .sectionTitle .subtitle{line-height: 1.14rem; margin-bottom: 5px; font-size: 1.14rem;}
+#popService .bgPopService .sectionTitle h2{line-height: 1.42rem; color: #131313; font-size: 1.42rem; font-weight: 600;}
+#popService .bgPopService .sectionStep{position: relative; width: 100%; height: auto; padding: 0 20px; box-sizing: border-box;}
+#popService .bgPopService .sectionStep .olStep{position: relative; width: 100%; height: auto;}
+#popService .bgPopService .sectionStep .liStep{position: relative; width: 100%; height: auto; padding: 20px 0; border-bottom: 1px solid #F0F0F0;}
+#popService .bgPopService .sectionStep .liStep:last-child{padding: 20px 0 15px 0; border-bottom: none;}
+#popService .bgPopService .sectionStep .step{line-height: 0.86rem; margin-bottom: 3px; font-size: 0.86rem; font-weight: 600;}
+#popService .bgPopService .sectionStep .title{line-height: 1.14rem; margin-bottom: 6px; color: #131313; font-size: 1.14rem; font-weight: 600;}
+#popService .bgPopService .sectionStep .body{line-height: 1.28rem; color: #A0A0A0;}
+
+@media (min-width: 1080px){
+    #mealPlan .sectionInfo .contentInfo .break{display: unset;}
+    #popService .bgPopService{width: 400px; margin-left: -200px; padding: 10px; box-sizing: border-box;}
+}

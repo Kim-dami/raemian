@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minidsum-scale=1.0, maxidsum-scale=1.0, user-scalable=no">
+    <title>식단 구독설정</title>
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/component.css">
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+
+    <script src="../js/jquery-1.8.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $( '.btnQuantity' ).on("click", function (){
+                $(".setFull .btnFull").removeClass("bgDisable");
+                $(".setFull .btnFull").addClass("bgMain");
+            });
+            $( '.btnHowService' ).on("click", function (){
+                $("#popService").removeClass("hidden");
+            });
+            $( '#popService .setFull .btnFull' ).on("click", function (){
+                $("#popService").addClass("hidden");
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>식단 구독설정</h1>
+        <button class="btnHowService" tabindex="1">
+            <svg viewBox="0 0 18 18">
+                <g>
+                    <path d="m9,1.8c-3.98,0-7.2,3.22-7.2,7.2s3.22,7.2,7.2,7.2,7.2-3.22,7.2-7.2c0-3.97-3.23-7.2-7.2-7.2m0-1.8c4.97,0,9,4.03,9,9s-4.03,9-9,9S0,13.97,0,9,4.03,0,9,0Z"/>
+                    <path d="m7.88,10.62h1.84c-.22-1.79,2.28-2.4,2.28-4.21,0-1.63-1.26-2.41-2.99-2.41-1.14,0-2.24.46-3.01,1.28l1.16.94c.41-.43.99-.69,1.59-.71.59-.08,1.13.32,1.21.9,0,.05,0,.09,0,.14,0,1.21-2.44,2.04-2.1,4.08Zm.91,3.38c.69.03,1.29-.48,1.32-1.16.04-.67-.5-1.25-1.19-1.28-.04,0-.09,0-.13,0-.69-.02-1.27.51-1.29,1.18s.53,1.24,1.22,1.26c.02,0,.05,0,.07,0Z"/>
+                </g>
+            </svg>
+            <span class="blind">식단 구독서비스 이용방법</span>
+        </button>
+    </header>
+    <main id="mealPlan">
+        <div class="bgMobile bgWhite"></div>
+        <div class="bgContent bgGray">
+            <section class="sectionTitle">
+                <p class="subtitle">우리집 라이프스타일에 맞게</p>
+                <h2>식단 구독 또는 변경이 가능해요! </h2>
+            </section>
+            <section class="sectionInfo">
+                <div class="bgInfo">
+                    <dl class="dlInfo">
+                        <dt class="titleInfo">구&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;독</dt>
+                        <dd class="contentInfo">다음주부터 적용</dd>
+                    </dl>
+                    <dl class="dlInfo">
+                        <dt class="titleInfo">결&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;제</dt>
+                        <dd class="contentInfo">매 주 일요일 23:50~24:00 다음주 주문 크레딧 차감</dd>
+                    </dl>
+                    <dl class="dlInfo">
+                        <dt class="titleInfo">취&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</dt>
+                        <dd class="contentInfo">음식수령 당일 오후 4시 30분까지 주문 취소가능</dd>
+                    </dl>
+                    <dl class="dlInfo">
+                        <dt class="titleInfo">수령장소</dt>
+                        <dd class="contentInfo">커뮤니티센터</dd>
+                    </dl>
+                    <dl class="dlInfo">
+                        <dt class="titleInfo">수령시간</dt>
+                        <dd class="contentInfo">오후 6시 ~ 오후 8시(경과시 폐기 및 환불불가)</dd>
+                    </dl>
+                </div>
+            </section>
+            <section class="sectionDaySelect">
+                <fieldset class="setDaySelect">
+                    <input type="radio" name="daySelect" class="inputDaySelect" id="ids-1" checked="checked" tabindex="6" />
+                    <label for="ids-1" class="labelDaySelect">
+                        <div class="dayOfWeek">월</div>
+                        <div class="selectedNum bgMain">1개</div>
+                    </label>
+                </fieldset>
+                <fieldset class="setDaySelect">
+                    <input type="radio" name="daySelect" class="inputDaySelect" id="ids-2" tabindex="7" />
+                    <label for="ids-2" class="labelDaySelect">
+                        <div class="dayOfWeek">화</div>
+                        <div class="selectedNum">0개</div>
+                    </label>
+                </fieldset>
+                <fieldset class="setDaySelect">
+                    <input type="radio" name="daySelect" class="inputDaySelect" id="ids-3" tabindex="8" />
+                    <label for="ids-3" class="labelDaySelect">
+                        <div class="dayOfWeek">수</div>
+                        <div class="selectedNum bgMain">1개</div>
+                    </label>
+                </fieldset>
+                <fieldset class="setDaySelect">
+                    <input type="radio" name="daySelect" class="inputDaySelect" id="ids-4" tabindex="9" />
+                    <label for="ids-4" class="labelDaySelect">
+                        <div class="dayOfWeek">목</div>
+                        <div class="selectedNum">0개</div>
+                    </label>
+                </fieldset>
+                <fieldset class="setDaySelect">
+                    <input type="radio" name="daySelect" class="inputDaySelect" id="ids-5" tabindex="10" />
+                    <label for="ids-5" class="labelDaySelect">
+                        <div class="dayOfWeek">금</div>
+                        <div class="selectedNum">0개</div>
+                    </label>
+                </fieldset>
+                <fieldset class="setDaySelect">
+                    <input type="radio" name="daySelect" class="inputDaySelect" id="ids-6" tabindex="11" />
+                    <label for="ids-6" class="labelDaySelect">
+                        <div class="dayOfWeek">토</div>
+                        <div class="selectedNum bgMain">2개</div>
+                    </label>
+                </fieldset>
+                <fieldset class="setDaySelect">
+                    <input type="radio" name="daySelect" class="inputDaySelect" id="ids-7" tabindex="12" />
+                    <label for="ids-7" class="labelDaySelect">
+                        <div class="dayOfWeek">일</div>
+                        <div class="selectedNum">0개</div>
+                    </label>
+                </fieldset>
+            </section>
+            <section class="sectionType">
+                <ul class="ulType">
+                    <li class="liType">
+                        <div class="photoType">
+                            <img src="../img/imgDinner.png" alt="도시락"/>
+                        </div>
+                        <div class="infoType">
+                            <div class="name">도시락</div>
+                            <div class="price">10,000원</div>
+                        </div>
+                        <div class="quantityType">
+                            <fieldset class="setQuantity">
+                                <button class="btnQuantity" tabindex="13">-</button>
+                            </fieldset>
+                            <span class="fontDisable">0</span>
+                            <fieldset class="setQuantity">
+                                <button class="btnQuantity" tabindex="14">+</button>
+                            </fieldset>
+                        </div>
+                    </li>
+                    <li class="liType">
+                        <div class="photoType">
+                            <img src="../img/imgSalad.png" alt="샐러드"/>
+                        </div>
+                        <div class="infoType">
+                            <div class="name">샐러드</div>
+                            <div class="price">8,000원</div>
+                        </div>
+                        <div class="quantityType">
+                            <fieldset class="setQuantity">
+                                <button class="btnQuantity" tabindex="15">-</button>
+                            </fieldset>
+                            <span class="fontMain">1</span>
+                            <fieldset class="setQuantity">
+                                <button class="btnQuantity" tabindex="16">+</button>
+                            </fieldset>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <div id="bottomFix">
+        <section class="sectionSum">
+            <div class="leftSum">총 주문금액</div>
+            <div class="rightSum">매주 <span class="amount">36,000원</span></div>
+        </section>
+        <section class="sectionFull"><!-- 설정 변경값이 없을 경우 -->
+            <fieldset class="setFull">
+                <button class="btnFull bgDisable">설정하기</button>
+            </fieldset>
+        </section>
+        <section class="sectionFull hidden"><!-- 설정 변경값이 있을 경우 -->
+            <fieldset class="setFull">
+                <button class="btnFull bgMain">설정하기</button>
+            </fieldset>
+        </section>
+        <nav>
+            <a href="#" class="linkNav" tabindex="2">
+                <svg viewBox="0 0 16 16" class="iconNav">
+                    <g>
+                        <rect class="areaIcon" width="16" height="16"/>
+                        <path class="fill" d="M8.13,1.1L1.3,5.69V15.1H6.06v-5.59h3.81v5.59h4.76V5.47L8.13,1.1Z"/>
+                    </g>
+                </svg>
+                <div class="txtNav">홈</div>
+            </a>
+            <a href="#" class="linkNav active" tabindex="3">
+                <svg viewBox="0 0 16 16" class="iconNav">
+                    <g>
+                        <rect class="areaIcon" width="16" height="16"/>
+                        <rect class="stroke" x="1.37" y="7.45" width="13.27" height="1.51"/>
+                        <rect class="stroke" x="5.12" y="13.3" width="5.76" height="1.51"/>
+                        <path class="stroke" d="m1.37,8.96h13.27v.19c0,2.21-1.79,4-4,4h-5.27c-2.21,0-4-1.79-4-4v-.19h0Z"/>
+                        <path class="stroke" d="m4.45,7.45s.23-1.87,1.77-1.87,1.76,1.44,1.78,1.78"/>
+                        <path class="stroke" d="m2.88,7.45s-1.43-1.05-.76-2.58c0,0,0-.35-.4-.68s-.66-1.44.32-2.14,2.21-.02,2.22.99c.01.75.4.85.4.85,0,0,1.25.54,1.39,1.7"/>
+                        <line class="stroke" x1="3.71" y1="5.07" x2="4.5" y2="6.4"/>
+                        <path class="stroke" d="m4.53,3.8s1.19-2.93,3.64-2.58c0,0,.96,1.18.49,2.45s-1.2,2.39-1.2,2.39"/>
+                        <line class="stroke" x1="6.85" y1="3.63" x2="5.9" y2="5.07"/>
+                        <path class="stroke" d="m13.77,7.45v-2.39s-.32-.67-.94-.67c-.71,0-.87,1-.87,1v-1.31s.03-.56-.91-.56-1.07.73-1.07.73v1.02s-.18-1.12-.78-1.12c-.74,0-.87.3-.87.3"/>
+                    </g>
+                </svg>
+                <div class="txtNav">식단구독</div>
+            </a>
+            <a href="#" class="linkNav" tabindex="4">
+                <svg viewBox="0 0 16 16" class="iconNav">
+                    <g>
+                        <rect class="areaIcon" width="16" height="16"/>
+                        <path class="stroke" d="M5,11.49V3.5h-1.94c-.49,.03-.87,.44-.85,.93V13.39c-.02,.49,.36,.91,.85,.93h6.99c.49-.03,.87-.44,.85-.93v-.97H5.85c-.49-.03-.87-.44-.85-.94Z"/>
+                        <path class="stroke" d="M10.89,12.42H5.85c-.49-.03-.87-.44-.85-.93V2.53c-.02-.49,.36-.91,.85-.93h4.43l3.41,3.5v6.39c.02,.49-.36,.91-.85,.93h-1.94Z"/>
+                        <path class="stroke" d="M13.04,5.09h-2.77V1.59l3.41,3.5h-.64Z"/>
+                        <line class="stroke" x1="7.81" y1="7.98" x2="11.08" y2="7.98"/>
+                        <line class="stroke" x1="7.81" y1="9.85" x2="11.08" y2="9.85"/>
+                    </g>
+                </svg>
+                <div class="txtNav">주문내역</div>
+            </a>
+            <a href="#" class="linkNav" tabindex="5">
+                <svg viewBox="0 0 16 16" class="iconNav">
+                    <g>
+                        <rect class="areaIcon" width="16" height="16"/>
+                        <circle class="fill" cx="8.01" cy="4.34" r="2.75"/>
+                        <path class="fill" d="M1.61,14.41s.57-5.51,6.42-5.51,6.35,5.51,6.35,5.51"/>
+                    </g>
+                </svg>
+                <div class="txtNav">MY</div>
+            </a>
+        </nav>
+    </div><!-- 네비 식단구독 -->
+    <div id="popService" class="hidden">
+        <div class="bgPopService">
+            <section class="sectionTitle">
+                <p class="subtitle">우리집 패턴에 맞게 설정하고</p>
+                <h2>매주 받아보는 식단 구독서비스</h2>
+            </section>
+            <section class="sectionStep">
+                <ol class="olStep">
+                    <li class="liStep">
+                        <div class="step fontMain">STEP 1</div>
+                        <div class="title">우리집 맞춤설정</div>
+                        <div class="body">요일별 메뉴와 수량을 설정해주세요</div>
+                    </li>
+                    <li class="liStep">
+                        <div class="step fontMain">STEP 2</div>
+                        <div class="title">구독한 식단받기</div>
+                        <div class="body">수령장소 및 수령시간에 식단을 찾아주세요<br />
+                            (룸서비스, 일반상점 추가예정)</div>
+                    </li>
+                    <li class="liStep">
+                        <div class="step fontMain">STEP 3</div>
+                        <div class="title">추가주문하기</div>
+                        <div class="body">홈에서 추가주문도 가능해요</div>
+                    </li>
+                    <li class="liStep">
+                        <div class="step fontMain">STEP 4</div>
+                        <div class="title">설정변경은 편리하게</div>
+                        <div class="body">[MY > 식단 구독설정]에서 쉽게 변경가능해요</div>
+                    </li>
+                </ol>
+            </section>
+            <section class="sectionFull">
+                <fieldset class="setFull">
+                    <button class="btnFull bgMain">확인</button>
+                </fieldset>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

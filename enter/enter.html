@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>입장하기</title>
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/component.css">
+    <link rel="stylesheet" type="text/css" href="../css/enter.css">
+
+    <script src="../js/jquery-1.8.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $( '.inputBottomLine' ).change( function() {
+                if(this.value){
+                    $(".sectionSubmit .setFull").eq(0).addClass("hidden");
+                    $(".sectionSubmit .setFull").eq(1).removeClass("hidden");
+                } else {
+                    $(".sectionSubmit .setFull").eq(1).addClass("hidden");
+                    $(".sectionSubmit .setFull").eq(0).removeClass("hidden");
+
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <main id="enter">
+        <div class="bgMobile bgWhite"></div>
+        <div class="bgContent bgWhite">
+            <h2>일상을 변화시키는<br />하이엔드 컨시어지 서비스</h2>
+            <section class="sectionInput">
+                <fieldset class="setBottomLine">
+                    <input type="text" class="inputBottomLine" placeholder="회원번호" value="" tabindex="1" />
+                </fieldset>
+                <fieldset class="setBottomLine">
+                    <input type="text" class="inputBottomLine" placeholder="입장코드" value="" tabindex="2" />
+                </fieldset>
+            </section>
+            <section class="sectionSubmit">
+                <fieldset class="setFull"><!-- 회원번호와 입장코드 미입력, 정책과 다르게 입력했을 경우 -->
+                    <button class="btnFull bgDisable" disabled="disabled" tabindex="3">입장하기</button>
+                </fieldset>
+                <fieldset class="setFull hidden"><!-- 회원번호와 입장코드가 정책과 맞게 입력됐을 경우 -->
+                    <button class="btnFull bgMain" tabindex="3">입장하기</button>
+                </fieldset>
+            </section>
+        </div>
+    </main>
+    <div id="bottomFix">
+        <section class="sectionForget">
+            <p class="textForget">회원번호 또는 입장코드를 잃어버리셨나요?</p>
+            <a href="tel:1688-1757" class="linkForget" tabindex="4">고객센터(1668-1757) 문의</a>
+        </section>
+    </div>
+</body>
+</html>

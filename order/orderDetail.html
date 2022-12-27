@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>주문상세</title>
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/component.css">
+    <link rel="stylesheet" type="text/css" href="../css/order.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="linkBack" tabindex="1">
+            <svg viewBox="0 0 16 16" class="iconBack">
+                <g>
+                    <rect width="16" height="16"/>
+                    <path d="M9.74,11.98L5.5,7.75,9.74,3.5"/>
+                </g>
+            </svg>
+        </a>
+        <h1>주문상세</h1>
+    </header>
+    <main id="orderDetail">
+        <div class="bgMobile bgWhite"></div>
+        <div class="bgContent bgGray">
+            <section class="sectionStatus">
+                <p class="orderStatus fontMain hidden">접수대기</p><!-- 접수대기 -->
+                <p class="orderStatus fontMain hidden">주문접수</p><!-- 주문접수 -->
+                <p class="orderStatus fontDisable">배달완료</p><!-- 배달완료 -->
+                <h2>2022.12.14</h2>
+            </section>
+            <section class="sectionMenu">
+                <h3>주문메뉴</h3>
+                <ul class="ulMenu">
+                    <li class="liMenu">
+                        <div class="menu">도시락</div>
+                        <div class="price">10,000원</div>
+                        <div class="quantity">
+                            1개
+                            <fieldset class="setPartial hidden"><!-- 주문접수, 배달완료일 경우 hidden -->
+                                <button class="btnPartial" tabindex="2">
+                                    <svg viewBox="0 0 20 20" class="iconPartial">
+                                        <g>
+                                            <circle class="cls-3" cx="10" cy="10" r="9.25"/>
+                                            <line x1="6.19" y1="5.91" x2="13.64" y2="13.55"/>
+                                            <line x1="6.19" y1="13.55" x2="13.64" y2="5.91"/>
+                                        </g>
+                                    </svg>
+                                    <span class="blind">부분취소</span>
+                                </button>
+                            </fieldset>
+                        </div>
+                    </li>
+                    <li class="liMenu">
+                        <div class="menu">샐러드</div>
+                        <div class="price">8,000원</div>
+                        <div class="quantity">
+                            1개
+                            <fieldset class="setPartial hidden"><!-- 주문접수, 배달완료일 경우 hidden -->
+                                <button class="btnPartial" tabindex="3">
+                                    <svg viewBox="0 0 20 20" class="iconPartial">
+                                        <g>
+                                            <circle class="cls-3" cx="10" cy="10" r="9.25"/>
+                                            <line x1="6.19" y1="5.91" x2="13.64" y2="13.55"/>
+                                            <line x1="6.19" y1="13.55" x2="13.64" y2="5.91"/>
+                                        </g>
+                                    </svg>
+                                    <span class="blind">부분취소</span>
+                                </button>
+                            </fieldset>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="sectionAmount">
+                <h3>주문금액</h3>
+                <div class="textRight">18,000원</div>
+            </section>
+        </div>
+    </main>
+    <div id="bottomFix" class="hidden"><!-- 접수대기일 경우 -->
+        <section class="sectionNoticeCancel">
+            <svg viewBox="0 0 16 16" class="iconNoticeCancel">
+                <g>
+                    <rect width="16" height="16"/>
+                    <path d="m8,3c-2.76,0-5,2.24-5,5s2.24,5,5,5,5-2.24,5-5-2.24-5-5-5Zm.85,8.04c0,.43-.35.79-.79.79s-.79-.35-.79-.79v-3.04c0-.43.35-.79.79-.79s.79.35.79.79v3.04Zm-.79-5.02c-.44,0-.8-.36-.8-.8s.36-.8.8-.8.8.36.8.8-.36.8-.8.8Z"/>
+                </g>
+            </svg>
+            주문취소는 음식수령 당일 오후 4시 30분까지 가능해요
+        </section>
+        <section class="sectionFull">
+            <fieldset class="setFull">
+                <button class="btnFull bgMain" tabindex="4">전체취소</button>
+            </fieldset>
+        </section>
+    </div>
+    <div id="bottomFix"><!-- 주문접수, 배달완료일 경우 -->
+        <section class="sectionNoticeCancel fullNone">
+            <svg viewBox="0 0 16 16" class="iconNoticeCancel">
+                <g>
+                    <rect width="16" height="16"/>
+                    <path d="m8,3c-2.76,0-5,2.24-5,5s2.24,5,5,5,5-2.24,5-5-2.24-5-5-5Zm.85,8.04c0,.43-.35.79-.79.79s-.79-.35-.79-.79v-3.04c0-.43.35-.79.79-.79s.79.35.79.79v3.04Zm-.79-5.02c-.44,0-.8-.36-.8-.8s.36-.8.8-.8.8.36.8.8-.36.8-.8.8Z"/>
+                </g>
+            </svg>
+            주문취소는 음식수령 당일 오후 4시 30분까지 가능해요
+        </section>
+    </div>
+</body>
+</html>
