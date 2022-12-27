@@ -1,0 +1,112 @@
+@charset "utf-8";
+/*---------------------------------------------
+	파일명 : order
+	설　명 : 주문하기 및 주문내역
+	클래스명 : 카멜케이스, 태그역활 + 컨텐츠내용 조합, 넘버링은 하이픈
+	작성순서 : 1. 레이아웃  2.크기/간격  3.박스모양  4.폰트  5.기타
+			position / display / float / width / height / margin / padding / border / background / font / overflow / etc...
+---------------------------------------------*/
+/* 주문하기 */
+#order {padding: 50px 0 73px 0;}
+#order .bgGray{padding-bottom: 5px;}
+#order h3{padding: 20px; box-sizing: border-box;}
+#order .sectionWho{position: relative; z-index: 10; width: 100%; height: auto; margin-bottom: 5px; padding-bottom: 10px; background-color: #FFFFFF;}
+#order .sectionWho .setBorder{position: relative; width: 100%; height: auto; padding: 0 20px 12px 20px; box-sizing: border-box;}
+#order .sectionWho .setRadius{position: relative; width: 100%; height: auto; padding: 0 40px 10px 20px; box-sizing: border-box; text-align: right;}
+#order .sectionWho .setTooltip{position: absolute; right: 20px; bottom: 20px; z-index: 10;}
+#order .sectionWho .btnTooltip{padding-left: 20px;}
+#order .sectionWho .iconTooltip{width: 16px; height: 16px; vertical-align: top;}
+#order .sectionWho .iconTooltip rect{fill: none;}
+#order .sectionWho .iconTooltip path{fill: #F0F0F0;}
+#order .sectionWho .contentTooltip{position: absolute; right: 10px; top: 145px; line-height: 1rem; padding: 15px; border-radius: 5px; background-color: #FFFFFF; font-size: 0.72rem; box-shadow: 0 2px 8px rgba(0,0,0,12%);}
+#order .sectionWho .triangleTooltip{position: absolute; z-index: -1; right: -7px; top: -20px;}
+#order .sectionOrder{position: relative; width: 100%; height: auto; margin-bottom: 5px; background-color: #FFFFFF;}
+#order .sectionOrder .textRight{position: absolute; top: 0; right: 20px; line-height: 1.14rem; padding: 20px 0; color: #A0A0A0; text-align: right;}
+#order .sectionOrder .ulOrder{position: relative; width: 100%; height: auto; padding: 0 20px; box-sizing: border-box;}
+#order .sectionOrder .liOrder{position: relative; width: 100%; height: auto; padding-bottom: 18px;}
+#order .sectionOrder .leftOrder{display: inline-block; vertical-align: top; line-height: 1rem; padding-right: 8px; border-right: 1px solid #F0F0F0;}
+#order .sectionOrder .leftOrder .date{margin-right: 8px;}
+#order .sectionOrder .rightOrder{display: inline-block; vertical-align: top; line-height: 1rem; padding-left: 8px; box-sizing: border-box;}
+#order .sectionOrder .rightOrder .menu{margin-right: 3px;}
+#order .sectionOrder .rightOrder .quantity{margin-right: 12px; color: #A0A0A0; font-size: 0.86rem;}
+#order .sectionOrder .rightOrder .quantity:last-child{margin-right: 0;}
+#order .sectionOrder .rightOrder .quantity:last-child{margin-right: 0;}
+#order .sectionOrder .rightOrder .quantity:last-child{margin-right: 0;}
+#order .sectionOrder .noticeAble{display: inline-block; line-height: 0.86rem; margin: 0 0 20px 20px; padding : 6px 10px 5px 10px; border-width: 1px; border-radius: 12px; font-size: 0.86rem;}
+#order .sectionPay{position: relative; width: 100%; height: auto; background-color: #FFFFFF;}
+#order .sectionPay .dlPay{position: relative; width:100%; height: auto; padding: 0 20px; box-sizing: border-box;}
+#order .sectionPay .dlPay .titlePay{position: absolute; top: 0; left: 20px; width: 80px; height: auto; line-height: 1.14rem; color: #131313;}
+#order .sectionPay .dlPay .contentPay{position: relative; width:100%; height:auto; line-height: 1.14rem; padding: 0 0 20px 120px; box-sizing: border-box; color: #131313; font-size: 1.14rem; text-align: right;}
+#order .sectionPay .dlPay .contentPay.fontMain{font-weight: 600;}
+
+/* 주문내역 */
+#orderHistory{padding: 50px 0;}
+#orderHistory .sectionDate{position: relative; width: 100%; height: auto; background-color: #FFFFFF;}
+#orderHistory .sectionDate .btnMonthPicker{position: relative; height: auto; line-height: 1.14rem; padding: 20px; font-size: 1.14rem; font-weight: 600;}
+#orderHistory .sectionDate .iconUnfold,
+#orderHistory .sectionDate .iconFold{margin-left: 3px;}
+#orderHistory .sectionDate .textRight{position: absolute; top: 0; right: 20px; line-height: 1.14rem; padding: 20px 0; color: #505050; text-align: right; font-size: 0.86rem;}
+#orderHistory .sectionPicker{position: absolute; top: 45px; left: 15px; z-index: 10; width: 230px; height: auto; padding: 0 15px; border-radius: 5px; background-color: #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,12%);}
+#orderHistory .sectionPicker .areaYear{position: relative; width:100%; height: 45px; line-height: 45px; color: #131313; font-weight: 600; text-align: center;}
+#orderHistory .sectionPicker .areaYear .setPreYear,
+#orderHistory .sectionPicker .areaYear .setNextYear{position: absolute; top: 5px; bottom: 0; z-index: 10; width: 35px; height: 35px; line-height: 45px; text-align: center;}
+#orderHistory .sectionPicker .areaYear .setPreYear{left: 0;}
+#orderHistory .sectionPicker .areaYear .setNextYear{right: 0;}
+#orderHistory .sectionPicker .areaYear .btnPreYear,
+#orderHistory .sectionPicker .areaYear .btnNextYear{display: block; width: 100%; height: 100%;}
+#orderHistory .sectionPicker .areaYear .btnPreYear:hover,
+#orderHistory .sectionPicker .areaYear .btnNextYear:hover{background-color: #F8F8F8;}
+#orderHistory .sectionPicker .areaYear svg{width: 16px; height: 16px;}
+#orderHistory .sectionPicker .areaYear rect{fill: none;}
+#orderHistory .sectionPicker .areaYear path{fill: none; stroke: #505050; stroke-width: 1;}
+#orderHistory .sectionPicker .areaMonth{position: relative; width:100%; height: auto; padding: 5px 0; border-top: 1px solid #F0F0F0; border-bottom: 1px solid #F0F0F0;}
+#orderHistory .sectionPicker .areaMonth:after{content: ""; display: block; clear: both;}
+#orderHistory .sectionPicker .areaMonth .setMonth{position: relative; float: left; width: 33.33%; height: auto; padding: 5px; box-sizing: border-box;}
+#orderHistory .sectionPicker .areaMonth .inputMonth{position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0;}
+#orderHistory .sectionPicker .areaMonth .labelMonth{display: block; width: 100%; height: 32px; line-height: 32px; border-radius: 5px; box-sizing: border-box; color: #131313; font-size: 0.86rem; text-align: center;}
+#orderHistory .sectionPicker .areaMonth .inputMonth:hover + .labelMonth{background-color: #F8F8F8;}
+#orderHistory .sectionPicker .areaMonth .checked + .labelMonth{line-height: 30px; border-width: 1px;}
+#orderHistory .sectionPicker .areaButton{position: relative; width:100%; height: auto; padding: 10px 0; text-align: right;}
+#orderHistory .sectionPicker .areaButton .setPickerCancel{display: inline-block; margin-right: 5px;}
+#orderHistory .sectionPicker .areaButton .btnPickerCancel{width: 80px; height: 32px; line-height: 30px; border-width: 1px; border-radius: 5px; box-sizing: border-box; background-color: #FFFFFF; font-weight: 600; text-align: center;}
+#orderHistory .sectionPicker .areaButton .setPicker{display: inline-block;}
+#orderHistory .sectionPicker .areaButton .btnPicker{width: 80px; height: 32px; line-height: 32px; border-radius: 5px; color: #FFFFFF; font-weight: 600; text-align: center;}
+#orderHistory .sectionCalendar{position: relative; width: 100%; height: auto; background-color: #FFFFFF;}
+#orderHistory .sectionCalendar table{width: 100%; background-color: #FFFFFF;}
+#orderHistory .sectionCalendar .headCalendar,
+#orderHistory .sectionCalendar .bodyCalendar{position: relative; width: 14.28%; border: 1px solid #F0F0F0; font-size: 0.86rem;}
+#orderHistory .sectionCalendar .headCalendar{line-height: 0.86rem; padding: 6px; font-weight: 500; text-align: center;}
+#orderHistory .sectionCalendar .bodyCalendar{height: 85px;}
+#orderHistory .sectionCalendar .linkCalendar{position: relative; width: 100%; height: 100%; padding: 7px 0; box-sizing: border-box; cursor:pointer;}
+#orderHistory .sectionCalendar .linkCalendar .date{margin-bottom: 6px; padding-left: 5px; box-sizing: border-box;}
+#orderHistory .sectionCalendar .linkCalendar .badgeOrder{margin-bottom: 3px;}
+#orderHistory .sectionCalendar .linkCalendar .badgeOrder:last-child{margin-bottom: 0;}
+#orderHistory .sectionCalendar .linkCalendar .cancelDisable{position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,4%);}
+
+/* 주문상세 */
+#orderDetail{padding: 50px 0 99px 0;}
+#orderDetail .sectionStatus{position: relative; width: 100%; height: auto; margin-bottom: 5px; padding: 30px 20px 20px 20px; box-sizing: border-box; background-color: #FFFFFF;}
+#orderDetail .sectionStatus .orderStatus{line-height:1.14rem; margin-bottom: 7px; font-size: 1.14rem;}
+#orderDetail .sectionMenu{position: relative; width: 100%; height: auto; margin-bottom: 5px; background-color: #FFFFFF;}
+#orderDetail .sectionMenu h3{padding: 20px 20px 0 20px; box-sizing: border-box;}
+#orderDetail .sectionMenu .ulMenu{position: relative; width: 100%; height: auto; padding: 0 20px; box-sizing: border-box;}
+#orderDetail .sectionMenu .liMenu{position: relative; width: 100%; height: auto; padding: 20px 0; border-bottom: 1px solid #F0F0F0;}
+#orderDetail .sectionMenu .liMenu:last-child{border-bottom: none;}
+#orderDetail .sectionMenu .liMenu .menu{position: relative; width: 100%; height: auto; line-height: 1.14rem; margin-bottom: 7px; padding: 0 80px 0 15px; box-sizing: border-box; font-size: 1.14rem;}
+#orderDetail .sectionMenu .liMenu .menu:before{content: ""; position: absolute; top: 50%; left: 5px; width: 3px; height: 3px; margin-top: -1.5px; border-radius: 100%; background-color: #505050;}
+#orderDetail .sectionMenu .liMenu .price{width: 100%; height: auto; line-height: 1rem; padding: 0 80px 0 10px; box-sizing: border-box; color: #A0A0A0;}
+#orderDetail .sectionMenu .liMenu .quantity{position: absolute; top: 50%; right: 0; line-height: 20px; margin-top: -10px; font-size:1.14rem; text-align: right;}
+#orderDetail .sectionMenu .liMenu .quantity div{display: inline-block; vertical-align: top;}
+#orderDetail .sectionMenu .liMenu .quantity .setPartial{display: inline-block; vertical-align: top;}
+#orderDetail .sectionMenu .liMenu .quantity .btnPartial{display: inline-block; padding-left: 5px; vertical-align: top;}
+#orderDetail .sectionMenu .liMenu .quantity .iconPartial{width: 20px; height: 20px; vertical-align: top;}
+#orderDetail .sectionMenu .liMenu .quantity circle{fill: none; stroke: #009DAD; stroke-width: 1.5px;}
+#orderDetail .sectionMenu .liMenu .quantity line{fill: none; stroke: #009DAD; stroke-width: 1.5px;  stroke-linecap: round; stroke-miterlimit: 4;}
+#orderDetail .sectionAmount{position: relative; width: 100%; height: auto; background-color: #FFFFFF;}
+#orderDetail .sectionAmount h3{padding: 20px; box-sizing: border-box;}
+#orderDetail .sectionAmount .textRight{position: absolute; top: 0; right: 20px; line-height: 1.14rem; padding: 20px 0; color: #131313; text-align: right; font-size: 1.14rem; font-weight: 600;}
+#bottomFix .sectionNoticeCancel{position: relative; width: 100%; height: auto; line-height: 16px; padding: 10px 20px 0 20px; box-sizing: border-box; color: #A0A0A0; font-size: 0.72rem;}
+#bottomFix .sectionNoticeCancel.fullNone{padding: 20px;}
+#bottomFix .sectionNoticeCancel .iconNoticeCancel{width: 16px; height: 16px; vertical-align: top;}
+#bottomFix .sectionNoticeCancel .iconNoticeCancel rect{fill: none;}
+#bottomFix .sectionNoticeCancel .iconNoticeCancel path{fill: #A0A0A0;}

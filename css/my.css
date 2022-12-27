@@ -1,0 +1,42 @@
+@charset "utf-8";
+/*---------------------------------------------
+	파일명 : my
+	설　명 : 마이페이지
+	클래스명 : 카멜케이스, 태그역활 + 컨텐츠내용 조합, 넘버링은 하이픈
+	작성순서 : 1. 레이아웃  2.크기/간격  3.박스모양  4.폰트  5.기타
+			position / display / float / width / height / margin / padding / border / background / font / overflow / etc...
+---------------------------------------------*/
+/* 마이페이지 */
+#my{padding: 50px 0 85px 0;}
+#my .sectionMy{position: relative; width: 100%; height: auto; margin-bottom: 5px; background-color: #FFFFFF;}
+#my .sectionMy h3{padding: 20px; box-sizing: border-box;}
+#my .sectionMy .dlMy{position: relative; width:100%; height: auto; padding: 0 20px; box-sizing: border-box;}
+#my .sectionMy .dlMy .titleMy{position: absolute; top: 0; left: 30px; width:80px; height:auto; line-height: 1rem;}
+#my .sectionMy .dlMy .contentMy{position: relative; width:100%; height:auto; line-height: 1rem; padding: 0 0 20px 120px; box-sizing: border-box; color: #A0A0A0;}
+#my .sectionLink{position: relative; width: 100%; height: auto; margin-bottom: 5px; background-color: #FFFFFF;}
+#my .sectionLink .linkMy{position: relative; width: 100%; height: auto; padding: 0 20px; box-sizing: border-box; background-color: #FFFFFF; cursor:pointer;}
+#my .sectionLink .linkMy:hover,
+#my .sectionLink .linkMy:focus{background-color: #F8F8F8;}
+#my .sectionLink .linkMy h3{padding: 20px 0; border-bottom: 1px solid #F0F0F0;}
+#my .sectionLink .linkMy:last-child h3{border-bottom: none;}
+#my .sectionLink .textRight{position: absolute; top: 0; right: 46px; line-height: 1.14rem; padding: 20px 0; color: #A0A0A0; text-align: right;}
+#my .sectionLink .iconMore{position: absolute; right: 20px; top:50%; margin-top: -8px;}
+#my .sectionCs{position: relative; width: 100%; height: auto; padding: 15px 0;background-color: #FFFFFF; text-align: center;}
+#my .sectionCs .linkCs{position: relative; display: inline-block; line-height: 0.86rem; color: #A0A0A0; font-size: 0.86rem;}
+#my .sectionCs .linkCs:hover,
+#my .sectionCs .linkCs:focus{color: #505050;}
+#my .sectionCs .linkCs:after{content: ""; position: absolute; right: 0; left: 0; bottom: -2px; height: 1px; background-color: #A0A0A0;}
+
+#bottomFix .sectionClst{width: 100%; height: auto; line-height: 0.86rem; padding: 5px 0; background-color: #F0F0F0; color:#A0A0A0; font-size: 0.86rem; text-align: center; box-shadow: 0 0 4px rgba(0,0,0,6%);}
+
+/* 포인트 내역 */
+#pointHistory{padding: 50px 0;}
+#pointHistory .sectionHave{position: relative; width: 100%; height: auto; margin-bottom: 5px; padding: 30px 0 20px 0; background-color: #FFFFFF; text-align: center;}
+#pointHistory .sectionHave .titleHave{width:100%; height:auto; line-height: 1.14rem; margin-bottom: 3px; font-size: 1.14rem;}
+#pointHistory .sectionHistory{position: relative; width: 100%; height: auto; background-color: #FFFFFF;}
+#pointHistory .ulHistory{position: relative; width: 100%; height: auto; padding: 0 20px; box-sizing: border-box;}
+#pointHistory .liHistory{position: relative; width: 100%; height: auto; padding: 20px 0; border-bottom: 1px solid #F0F0F0;}
+#pointHistory .liHistory:last-child{border-bottom: none;}
+#pointHistory .detailHistory{width: 100%; height: auto; line-height: 1.28rem; margin-bottom: 3px; padding-right: 120px; box-sizing: border-box;}
+#pointHistory .timeHistory{width: 100%; height: auto; line-height: 0.86rem; padding-right: 120px; box-sizing: border-box; color: #A0A0A0; font-size: 0.86rem;}
+#pointHistory .amountHistory{position: absolute; top: 50%; right: 0; line-height: 1.14rem; margin-top: -0.57rem; color: #131313; font-size:1.14rem; text-align: right;}
